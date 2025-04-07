@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/zohomail/zoho_zeptomail_n8n"
   },
   "main": "index.js",
   "scripts": {
