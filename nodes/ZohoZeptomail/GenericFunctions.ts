@@ -14,6 +14,7 @@ import {
 
 } from './type'
 import { NodeApiError, NodeOperationError } from 'n8n-workflow';
+import { log } from 'node:console';
 
 export function throwOnErrorStatus(
     this: IExecuteFunctions | IHookFunctions | ILoadOptionsFunctions,
@@ -45,6 +46,7 @@ export async function zohoZeptomailApiRequest(
 		uri: `https://zeptomail.${getDomain(oauthTokenData.api_domain)}/${endpoint}`,
 		json: true,
 	};
+	
 	if (!Object.keys(body).length) {
 		delete options.body;
 	}
