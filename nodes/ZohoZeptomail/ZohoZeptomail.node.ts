@@ -5,7 +5,7 @@ import {
 	type INodeExecutionData,
 	type INodeType,
 	type INodeTypeDescription,
-	NodeConnectionTypes,
+	NodeConnectionType,
 } from 'n8n-workflow';
 
 import {
@@ -34,8 +34,8 @@ export class ZohoZeptomail implements INodeType {
 			name: 'Zoho ZeptoMail',
 		},
 		usableAsTool: true,
-		inputs: [NodeConnectionTypes.Main],
-		outputs: [NodeConnectionTypes.Main],
+		inputs: [NodeConnectionType.Main],
+		outputs: [NodeConnectionType.Main],
 		credentials: [
 			{
 				name: 'zohoZeptomailOAuth2Api',
