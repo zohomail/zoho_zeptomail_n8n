@@ -13,9 +13,7 @@ export type LoadedLayoutsMailagent = {
 
 export type LoadedLayoutsTemplate = {
 	data: Array<{
-        data: Array<{
-            template_name: string;
-            template_key: string;
-        }>;
+        template_name: string;
+        template_key: string;
 	}>;
 };
