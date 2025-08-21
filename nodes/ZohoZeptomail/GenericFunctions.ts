@@ -14,7 +14,6 @@ import {
 
 } from './type'
 import { NodeApiError, NodeOperationError } from 'n8n-workflow';
-import { log } from 'node:console';
 
 export function throwOnErrorStatus(
     this: IExecuteFunctions | IHookFunctions | ILoadOptionsFunctions,
@@ -43,7 +42,7 @@ export async function zohoZeptomailApiRequest(
 		headers: {"user-agent": "n8n zohozeptomail"},
 		body: body,
 		method,
-		qs,
+		qs,	
 		uri: `https://zeptomail.${getDomain(oauthTokenData.api_domain)}/${endpoint}`,
 		json: true,
 	};
@@ -76,7 +75,7 @@ export async function getPicklistMailagentOptions(
 	const responseData = (await zohoZeptomailApiRequest.call(
 		this,
 		'GET',
-		'portal/v1.0/mailagents',
+		'v1.1/mailagents',
 		{}
 	)) as LoadedLayoutsMailagent;
 
@@ -97,11 +96,11 @@ export async function getPicklistTemplateOptions(
 	const responseData = (await zohoZeptomailApiRequest.call(
 		this,
 		'GET',
-		`portal/v1.0/mailagents/${targetField}/template`,
+		`v1.1/mailagents/${targetField}/templates`,
 		{}
 	)) as LoadedLayoutsTemplate;
 
-	const pickListOptions = responseData.data[0].data
+	const pickListOptions = responseData.data
 
 	if (!pickListOptions) return [];
 
@@ -154,15 +153,3 @@ export function getReplyToAddresses(address: any): string {
     });
     return JSON.stringify(addresss);
 }
-
-
-
-
-
-
-  
-
-
-
-
-
