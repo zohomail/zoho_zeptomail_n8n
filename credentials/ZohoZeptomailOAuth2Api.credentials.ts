@@ -102,7 +102,7 @@ export class ZohoZeptomailOAuth2Api implements ICredentialType {
 			displayName: 'Scope',
 			name: 'scope',
 			type: 'hidden',
-			default: 'transmail.accounts.READ,transmail.email.CREATE,transmail.mailagent.READ,transmail.webhooks.CREATE,transmail.webhooks.DELETE,transmail.webhooks.READ,transmail.bounceSetup.READ,transmail.accounts.READ,transmail.email.CREATE,transmail.mailagent.READ,transmail.bounceSetup.READ,transmail.domain.READ,transmail.MailTemplates.READ',
+			default: 'transmail.accounts.READ,transmail.email.CREATE,transmail.accounts.READ,transmail.email.CREATE,transmail.domain.READ,Zeptomail.MailAgents.READ,Zeptomail.MailTemplates.READ',
 		},
 		{
 			displayName: 'Auth URI Query Parameters',
