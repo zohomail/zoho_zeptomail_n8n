@@ -7,7 +7,7 @@ export class ZohoZeptomailOAuth2Api implements ICredentialType {
 
 	displayName = 'Zoho ZeptoMail OAuth2 API';
 
-	documentationUrl = 'zohozeptomail';
+	documentationUrl = 'https://www.zoho.com/zeptomail/help/n8n-integration.html';
 
 	properties: INodeProperties[] = [
 		{
