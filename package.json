@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-zohozeptomail",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.1",
   "description": "This is an n8n community node. It lets you use Zoho ZeptoMail in your n8n workflows.",
   "main": "index.js",
   "files": [
